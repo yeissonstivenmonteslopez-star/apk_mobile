@@ -9,12 +9,12 @@ export default function TerminalView({ lines }) {
         <View style={[styles.dot, { backgroundColor: "#FF5F56" }]} />
         <View style={[styles.dot, { backgroundColor: "#FFBD2E" }]} />
         <View style={[styles.dot, { backgroundColor: "#27C93F" }]} />
-        <Text style={styles.headerTitle}>terminal (simulado)</Text>
+        <Text style={styles.headerTitle}>sesion (registro)</Text>
       </View>
       <ScrollView style={styles.body} contentContainerStyle={{ padding: SPACING.md }}>
         {lines.length === 0 ? (
           <Text style={styles.placeholder}>
-            Presiona un botón para simular el proceso de compilación...
+            Presiona una accion para registrar tu actividad...
           </Text>
         ) : (
           lines.map((line, idx) => (

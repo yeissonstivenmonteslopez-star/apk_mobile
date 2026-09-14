@@ -10,27 +10,25 @@ import { Ionicons } from "@expo/vector-icons";
 import TerminalView from "../components/TerminalView";
 import { COLORS, SPACING, RADIUS } from "../constants/theme";
 
-const APK_STEPS = [
-  "$ npx expo prebuild",
-  "✔ Proyecto nativo generado en /android",
-  "$ cd android && ./gradlew assembleRelease",
-  "> Compilando en modo Release...",
-  "> Aplicando R8 / ProGuard...",
-  "> Firmando con Keystore...",
-  "BUILD SUCCESSFUL",
-  "✔ app-release.apk generado (simulado)",
+const TRAINING_STEPS = [
+  "$ iniciar sesion de entrenamiento",
+  "✔ Calentamiento activado",
+  "$ completar bloque de tecnica",
+  "> Registrando repeticiones...",
+  "> Ajustando intensidad...",
+  "> Guardando rendimiento...",
+  "SESION COMPLETADA",
+  "✔ Entrenamiento registrado",
 ];
 
-const AAB_STEPS = [
-  "$ npx expo prebuild",
-  "✔ Proyecto nativo generado en /android",
-  "$ eas build -p android --profile preview",
-  "> Subiendo proyecto a EAS Build...",
-  "> Compilando bundle...",
-  "$ eas build -p android --profile production",
-  "> Generando paquete de distribución...",
-  "BUILD SUCCESSFUL",
-  "✔ app-release.aab generado (simulado)",
+const RECOVERY_STEPS = [
+  "$ iniciar rutina de recuperacion",
+  "✔ Respiracion controlada",
+  "> Movilidad articular...",
+  "> Hidratacion registrada...",
+  "> Estiramiento suave...",
+  "RECUPERACION COMPLETADA",
+  "✔ Sesion de recuperacion registrada",
 ];
 
 export default function Compilacion() {
@@ -60,52 +58,48 @@ export default function Compilacion() {
 
   return (
     <ScrollView style={styles.container} contentContainerStyle={styles.content}>
-      <Text style={styles.heading}>Compilación</Text>
+      <Text style={styles.heading}>Entrenamiento</Text>
       <Text style={styles.subheading}>
-        Simulación del proceso de generación de la aplicación Android.
+        Inicia una sesion y sigue tu progreso deportivo.
       </Text>
 
       <View style={styles.card}>
-        <Text style={styles.cardTitle}>APK</Text>
+        <Text style={styles.cardTitle}>Sesion principal</Text>
         <Text style={styles.cardText}>
-          El APK puede utilizarse para instalar y probar la aplicación
-          directamente en un dispositivo Android.
+          Completa tu bloque principal de tecnica, fuerza o velocidad.
         </Text>
         <TouchableOpacity
           style={styles.actionButton}
           disabled={running}
-          onPress={() => runSimulation(APK_STEPS)}
+          onPress={() => runSimulation(TRAINING_STEPS)}
         >
           <Ionicons name="play" size={16} color={COLORS.white} />
-          <Text style={styles.actionText}>Simular compilación APK</Text>
+          <Text style={styles.actionText}>Iniciar sesion</Text>
         </TouchableOpacity>
       </View>
 
       <View style={styles.card}>
-        <Text style={styles.cardTitle}>AAB</Text>
+        <Text style={styles.cardTitle}>Recuperacion</Text>
         <Text style={styles.cardText}>
-          El AAB es el formato utilizado para distribuir la aplicación
-          mediante Google Play.
+          Baja la intensidad, recupera el cuerpo y preparate para la proxima sesion.
         </Text>
         <TouchableOpacity
           style={[styles.actionButton, styles.actionButtonDark]}
           disabled={running}
-          onPress={() => runSimulation(AAB_STEPS)}
+          onPress={() => runSimulation(RECOVERY_STEPS)}
         >
           <Ionicons name="play" size={16} color={COLORS.white} />
-          <Text style={styles.actionText}>Simular compilación AAB</Text>
+          <Text style={styles.actionText}>Iniciar recuperacion</Text>
         </TouchableOpacity>
       </View>
 
-      <Text style={styles.terminalLabel}>Terminal</Text>
+      <Text style={styles.terminalLabel}>Registro de actividad</Text>
       <TerminalView lines={lines} />
 
       <View style={styles.noticeBox}>
         <Ionicons name="information-circle" size={18} color={COLORS.blue} />
         <Text style={styles.noticeText}>
-          Importante: los comandos mostrados son únicamente simulados dentro
-          de la interfaz. La aplicación no ejecuta comandos reales del
-          sistema.
+          Consejo: aumenta la intensidad de forma gradual y escucha las señales de tu cuerpo.
         </Text>
       </View>
     </ScrollView>

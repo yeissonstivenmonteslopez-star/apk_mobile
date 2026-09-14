@@ -1,18 +1,17 @@
-// Paleta de colores de la aplicación
-// Azul oscuro, azul, negro, blanco y gris. Sin verde como color principal.
+// Paleta deportiva: naranja, negro y superficies claras.
 export const COLORS = {
-  darkBlue: "#0B1730",
-  darkBlue2: "#111E3D",
-  blue: "#2563EB",
-  blueLight: "#3B82F6",
-  black: "#0F0F0F",
+  darkBlue: "#111111",
+  darkBlue2: "#1F1F1F",
+  blue: "#F97316",
+  blueLight: "#FB923C",
+  black: "#111111",
   white: "#FFFFFF",
-  gray: "#6B7280",
-  grayLight: "#9CA3AF",
-  background: "#F3F4F6",
-  border: "#E5E7EB",
+  gray: "#57534E",
+  grayLight: "#A8A29E",
+  background: "#FFF7ED",
+  border: "#FED7AA",
   danger: "#DC2626",
-  success: "#2563EB", // se usa azul en vez de verde para mantener la paleta
+  success: "#F97316",
 };
 
 export const SPACING = {

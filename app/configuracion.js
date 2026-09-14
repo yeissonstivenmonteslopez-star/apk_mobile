@@ -13,23 +13,19 @@ import {
 import { COLORS, SPACING, RADIUS } from "../constants/theme";
 
 export default function Configuracion() {
-  const [appName, setAppName] = useState("Mi Aplicacion");
-  const [packageName, setPackageName] = useState("com.example.miapp");
-  const [versionCode, setVersionCode] = useState("1");
-  const [version, setVersion] = useState("1.0.0");
-  const [keystoreName, setKeystoreName] = useState("my-upload-key.keystore");
-  const [keystoreAlias, setKeystoreAlias] = useState("my-key-alias");
-  const [keystorePassword, setKeystorePassword] = useState("");
+  const [appName, setAppName] = useState("Rendimiento Deportivo");
+  const [sport, setSport] = useState("Futbol");
+  const [goal, setGoal] = useState("Mejorar resistencia");
+  const [weeklySessions, setWeeklySessions] = useState("4");
+  const [athleteName, setAthleteName] = useState("Mi perfil");
 
   const previewJson = `{
-  "expo": {
-    "name": "${appName}",
-    "version": "${version}",
-    "android": {
-      "package": "${packageName}",
-      "versionCode": ${versionCode || 0}
+    "perfil": {
+      "atleta": "${athleteName}",
+      "deporte": "${sport}",
+      "objetivo": "${goal}",
+      "sesionesPorSemana": ${weeklySessions || 0}
     }
-  }
 }`;
 
   return (
@@ -38,50 +34,39 @@ export default function Configuracion() {
       behavior={Platform.OS === "ios" ? "padding" : undefined}
     >
       <ScrollView style={styles.container} contentContainerStyle={styles.content}>
-        <Text style={styles.heading}>Configuración de la aplicación</Text>
+        <Text style={styles.heading}>Perfil del atleta</Text>
         <Text style={styles.subheading}>
-          En Expo SDK 57 la configuración de Android se realiza principalmente
-          desde app.json o app.config.js.
+          Personaliza tu enfoque para que cada sesion tenga un objetivo claro.
         </Text>
 
         <Field
-          label="Nombre de la aplicación"
+          label="Nombre del plan"
           value={appName}
           onChangeText={setAppName}
         />
         <Field
-          label="android.package"
-          value={packageName}
-          onChangeText={setPackageName}
-          autoCapitalize="none"
+          label="Nombre del atleta"
+          value={athleteName}
+          onChangeText={setAthleteName}
         />
         <Field
-          label="versionCode"
-          value={versionCode}
-          onChangeText={setVersionCode}
+          label="Deporte principal"
+          value={sport}
+          onChangeText={setSport}
+        />
+        <Field
+          label="Objetivo de la temporada"
+          value={goal}
+          onChangeText={setGoal}
+        />
+        <Field
+          label="Sesiones por semana"
+          value={weeklySessions}
+          onChangeText={setWeeklySessions}
           keyboardType="numeric"
         />
-        <Field label="version" value={version} onChangeText={setVersion} />
-        <Field
-          label="Nombre del Keystore"
-          value={keystoreName}
-          onChangeText={setKeystoreName}
-          autoCapitalize="none"
-        />
-        <Field
-          label="Alias del Keystore"
-          value={keystoreAlias}
-          onChangeText={setKeystoreAlias}
-          autoCapitalize="none"
-        />
-        <Field
-          label="Contraseña del Keystore"
-          value={keystorePassword}
-          onChangeText={setKeystorePassword}
-          secureTextEntry
-        />
 
-        <Text style={styles.previewLabel}>Vista previa (app.json)</Text>
+        <Text style={styles.previewLabel}>Resumen del perfil</Text>
         <View style={styles.previewBox}>
           <Text style={styles.previewText}>{previewJson}</Text>
         </View>

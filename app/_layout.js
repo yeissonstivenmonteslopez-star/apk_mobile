@@ -9,6 +9,7 @@ export default function RootLayout() {
     <>
       <StatusBar style="light" />
       <Tabs
+        initialRouteName="index"
         screenOptions={{
           headerStyle: { backgroundColor: COLORS.darkBlue },
           headerTintColor: COLORS.white,
@@ -25,6 +26,13 @@ export default function RootLayout() {
         <Tabs.Screen
           name="index"
           options={{
+            href: null,
+            headerShown: false,
+          }}
+        />
+        <Tabs.Screen
+          name="home"
+          options={{
             title: "Inicio",
             tabBarIcon: ({ color, size }) => (
               <Ionicons name="home" size={size} color={color} />
@@ -34,16 +42,16 @@ export default function RootLayout() {
         <Tabs.Screen
           name="conceptos"
           options={{
-            title: "Conceptos",
+            title: "Deportes",
             tabBarIcon: ({ color, size }) => (
-              <Ionicons name="book" size={size} color={color} />
+              <Ionicons name="trophy" size={size} color={color} />
             ),
           }}
         />
         <Tabs.Screen
           name="configuracion"
           options={{
-            title: "Config",
+            title: "Perfil",
             tabBarIcon: ({ color, size }) => (
               <Ionicons name="settings" size={size} color={color} />
             ),
@@ -52,27 +60,18 @@ export default function RootLayout() {
         <Tabs.Screen
           name="compilacion"
           options={{
-            title: "Compilar",
+            title: "Entrenar",
             tabBarIcon: ({ color, size }) => (
-              <Ionicons name="hammer" size={size} color={color} />
+              <Ionicons name="barbell" size={size} color={color} />
             ),
           }}
         />
         <Tabs.Screen
           name="checklist"
           options={{
-            title: "Checklist",
+            title: "Rutina",
             tabBarIcon: ({ color, size }) => (
               <Ionicons name="checkmark-done" size={size} color={color} />
-            ),
-          }}
-        />
-        <Tabs.Screen
-          name="autoevaluacion"
-          options={{
-            title: "Quiz",
-            tabBarIcon: ({ color, size }) => (
-              <Ionicons name="help-circle" size={size} color={color} />
             ),
           }}
         />

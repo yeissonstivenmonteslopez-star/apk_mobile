@@ -18,7 +18,7 @@ export default function Checklist() {
   return (
     <View style={styles.container}>
       <View style={styles.header}>
-        <Text style={styles.heading}>Checklist de publicación</Text>
+        <Text style={styles.heading}>Rutina de entrenamiento</Text>
         <ProgressBar
           progress={total ? done / total : 0}
           label={`${done} de ${total} completados`}

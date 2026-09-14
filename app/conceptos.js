@@ -8,9 +8,9 @@ export default function Conceptos() {
   return (
     <View style={styles.container}>
       <ScrollView contentContainerStyle={styles.content}>
-        <Text style={styles.heading}>Conceptos clave</Text>
+        <Text style={styles.heading}>Disciplinas deportivas</Text>
         <Text style={styles.subheading}>
-          Antes de compilar tu aplicación, repasa estos términos.
+          Explora ideas para entrenar mejor y sostener tu progreso.
         </Text>
 
         {CONCEPTS.map((item) => (

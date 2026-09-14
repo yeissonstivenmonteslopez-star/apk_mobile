@@ -1,51 +1,8 @@
 export const CONCEPTS = [
-  {
-    id: "debug-release",
-    icon: "bug-outline",
-    title: "Debug vs Release",
-    text:
-      "El modo Debug incluye herramientas de depuración, es más pesado y lento, pensado solo para desarrollo. El modo Release está optimizado, firmado y listo para ser instalado por usuarios finales.",
-  },
-  {
-    id: "apk-aab",
-    icon: "archive-outline",
-    title: "APK vs AAB",
-    text:
-      "El APK (Android Package) es un binario instalable directamente en un dispositivo. El AAB (Android App Bundle) es el formato que exige Google Play y permite generar paquetes optimizados según cada dispositivo.",
-  },
-  {
-    id: "keystore",
-    icon: "key-outline",
-    title: "Keystore",
-    text:
-      "Archivo protegido con contraseña que guarda las claves criptográficas usadas para firmar digitalmente la aplicación, garantizando su autenticidad e integridad.",
-  },
-  {
-    id: "versioncode",
-    icon: "git-commit-outline",
-    title: "versionCode",
-    text:
-      "Número entero que se incrementa en cada publicación. Google Play lo usa internamente para identificar qué versión es más reciente.",
-  },
-  {
-    id: "versionname",
-    icon: "pricetag-outline",
-    title: "versionName",
-    text:
-      "Texto visible para el usuario (por ejemplo 1.0.0) que indica la versión de la aplicación de forma comprensible.",
-  },
-  {
-    id: "semver",
-    icon: "layers-outline",
-    title: "SemVer",
-    text:
-      "Versionado Semántico: MAJOR.MINOR.PATCH. MAJOR para cambios grandes, MINOR para nuevas funciones compatibles y PATCH para correcciones.",
-  },
-  {
-    id: "r8-proguard",
-    icon: "shield-checkmark-outline",
-    title: "R8 / ProGuard",
-    text:
-      "Herramientas que reducen, ofuscan y optimizan el código para dificultar la ingeniería inversa y disminuir el tamaño final de la aplicación.",
-  },
+  { id: "futbol", icon: "football-outline", title: "Futbol", text: "Mejora el control, el pase y la lectura del juego con sesiones cortas y constantes." },
+  { id: "baloncesto", icon: "basketball-outline", title: "Baloncesto", text: "Trabaja el drible, los cambios de ritmo y el lanzamiento desde distintas zonas." },
+  { id: "atletismo", icon: "walk-outline", title: "Atletismo", text: "Combina tecnica de carrera, velocidad y resistencia para progresar sin perder la forma." },
+  { id: "fuerza", icon: "barbell-outline", title: "Fuerza", text: "Entrena con movimientos controlados, aumenta la carga poco a poco y prioriza la tecnica." },
+  { id: "recuperacion", icon: "water-outline", title: "Recuperacion", text: "Hidratarte, dormir bien y respetar los descansos tambien hacen parte del entrenamiento." },
+  { id: "equipo", icon: "people-outline", title: "Trabajo en equipo", text: "La comunicacion, la confianza y el respeto convierten el esfuerzo individual en rendimiento colectivo." },
 ];

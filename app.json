@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "Publicación Android",
+    "name": "Rendimiento Deportivo",
     "slug": "apk-sena",
     "scheme": "publicacionandroid",
     "version": "1.0.0",
@@ -11,7 +11,7 @@
       "package": "com.sena.adso.publicacionandroid",
       "versionCode": 1,
       "adaptiveIcon": {
-        "backgroundColor": "#0B1730"
+        "backgroundColor": "#111111"
       }
     },
     "plugins": [

@@ -1,7 +1,6 @@
-# Publicación de Aplicaciones Android (Expo SDK 57 + React Native)
+# Rendimiento Deportivo (Expo SDK 57 + React Native)
 
-Aplicación móvil educativa desarrollada para la Guía de Aprendizaje "Clase 12 - Publicación" (SENA - ADSO).
-Simula, paso a paso, el proceso de preparar y publicar una app Expo/React Native en Android.
+Aplicación móvil deportiva para organizar sesiones, disciplinas, recuperación y progreso del atleta.
 
 ## Tecnologías
 
@@ -10,8 +9,7 @@ Simula, paso a paso, el proceso de preparar y publicar una app Expo/React Native
 - Expo Router (navegación por pestañas)
 - @expo/vector-icons
 
-No usa backend, base de datos, login, HTML, Tailwind ni Vite. Todos los datos son locales
-y los comandos de compilación que se muestran son **simulados** (no ejecutan nada real).
+Usa un login local demostrativo y datos deportivos locales. No requiere backend, HTML, Tailwind ni Vite.
 
 ## Cómo ejecutar el proyecto
 
@@ -33,15 +31,12 @@ y los comandos de compilación que se muestran son **simulados** (no ejecutan na
 
 ## Pantallas
 
-1. **Inicio** – Presentación y botón "Comenzar".
-2. **Conceptos** – Tarjetas: Debug vs Release, APK vs AAB, Keystore, versionCode,
-   versionName, SemVer, R8/ProGuard.
-3. **Configuración** – Formulario para nombre, package, versionCode, version y
-   credenciales del Keystore, con vista previa del `app.json`.
-4. **Compilación** – Explicación de APK vs AAB y una terminal simulada que
-   muestra los comandos típicos (`expo prebuild`, `eas build`, `gradlew`).
-5. **Checklist** – Lista interactiva con checkboxes y barra de progreso.
-6. **Autoevaluación** – Quiz de 4 preguntas con calificación final.
+1. **Login** – Acceso local de demostracion.
+2. **Inicio** – Resumen para comenzar a entrenar.
+3. **Deportes** – Disciplinas y recomendaciones.
+4. **Perfil** – Datos del atleta y objetivo semanal.
+5. **Entrenar** – Registro de sesion principal o recuperacion.
+6. **Rutina** – Lista interactiva de tareas deportivas.
 
 ## Estructura del proyecto
 
@@ -53,8 +48,7 @@ app/                 Pantallas (Expo Router)
   configuracion.js
   compilacion.js
   checklist.js
-  autoevaluacion.js
 components/          Componentes reutilizables (tarjetas, checklist, terminal, progreso)
 constants/theme.js   Paleta de colores y espaciados
-data/                Datos locales (conceptos, checklist, quiz)
+data/                Datos locales de disciplinas y rutinas
 ```
