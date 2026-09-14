@@ -1,0 +1,29 @@
+{
+  "expo": {
+    "name": "Publicación Android",
+    "slug": "apk-sena",
+    "scheme": "publicacionandroid",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "sdkVersion": "57.0.0",
+    "android": {
+      "package": "com.sena.adso.publicacionandroid",
+      "versionCode": 1,
+      "adaptiveIcon": {
+        "backgroundColor": "#0B1730"
+      }
+    },
+    "plugins": [
+      "expo-router",
+      "expo-font"
+    ],
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "3262074b-3065-4ebf-93a8-97049943ae01"
+      }
+    },
+    "owner": "yeissonmontss-team"
+  }
+}
