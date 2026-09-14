@@ -2,14 +2,22 @@ import React from "react";
 import { Tabs } from "expo-router";
 import { Ionicons } from "@expo/vector-icons";
 import { StatusBar } from "expo-status-bar";
+import Login from "./login";
+import { AuthProvider, useAuth } from "../context/AuthContext";
 import { COLORS } from "../constants/theme";
 
-export default function RootLayout() {
+function AppTabs() {
+  const { isAuthenticated } = useAuth();
+
+  if (!isAuthenticated) {
+    return <Login />;
+  }
+
   return (
     <>
       <StatusBar style="light" />
       <Tabs
-        initialRouteName="index"
+        initialRouteName="home"
         screenOptions={{
           headerStyle: { backgroundColor: COLORS.darkBlue },
           headerTintColor: COLORS.white,
@@ -23,13 +31,6 @@ export default function RootLayout() {
           tabBarLabelStyle: { fontSize: 11 },
         }}
       >
-        <Tabs.Screen
-          name="index"
-          options={{
-            href: null,
-            headerShown: false,
-          }}
-        />
         <Tabs.Screen
           name="home"
           options={{
@@ -77,5 +78,13 @@ export default function RootLayout() {
         />
       </Tabs>
     </>
+  );
+}
+
+export default function RootLayout() {
+  return (
+    <AuthProvider>
+      <AppTabs />
+    </AuthProvider>
   );
 }

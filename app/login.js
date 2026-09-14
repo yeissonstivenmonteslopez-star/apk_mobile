@@ -11,12 +11,14 @@ import {
 import { useRouter } from "expo-router";
 import { Ionicons } from "@expo/vector-icons";
 import { COLORS, RADIUS, SPACING } from "../constants/theme";
+import { useAuth } from "../context/AuthContext";
 
 const DEMO_USERNAME = "aprendiz";
 const DEMO_PASSWORD = "sena123";
 
 export default function Login() {
   const router = useRouter();
+  const { login } = useAuth();
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
@@ -24,6 +26,7 @@ export default function Login() {
   function handleLogin() {
     if (username.trim().toLowerCase() === DEMO_USERNAME && password === DEMO_PASSWORD) {
       setError("");
+      login();
       router.replace("/home");
       return;
     }
